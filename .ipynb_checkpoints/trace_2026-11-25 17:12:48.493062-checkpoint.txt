@@ -1,0 +1,38 @@
+2026-11-25 17:12:51.750268
+Node: ask_model_to_reason (entry)
+----
+2026-11-25 17:12:52.525320
+Node: ask_model_to_reason (exit)
+content=[{'type': 'tool_use', 'name': 'get_product_price', 'input': {'query': 'P002'}, 'id': 'tooluse_NJ1Y9ndyOcepSqlkcAvvAh'}, {'type': 'tool_use', 'name': 'get_product_price', 'input': {'query': 'P003'}, 'id': 'tooluse_bkuXZoupIVEKYUKGloOwLc'}] additional_kwargs={} response_metadata={'ResponseMetadata': {'RequestId': '81ac0633-3955-49ce-a345-8be314b90063', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Wed, 25 Nov 2026 17:12:52 GMT', 'content-type': 'application/json', 'content-length': '416', 'connection': 'keep-alive', 'x-amzn-requestid': '81ac0633-3955-49ce-a345-8be314b90063'}, 'RetryAttempts': 0}, 'stopReason': 'tool_use', 'metrics': {'latencyMs': [762]}, 'model_name': 'us.amazon.nova-2-lite-v1:0'} id='run--01a213b2-2528-7752-a6f6-14da3b736b38-0' tool_calls=[{'name': 'get_product_price', 'args': {'query': 'P002'}, 'id': 'tooluse_NJ1Y9ndyOcepSqlkcAvvAh', 'type': 'tool_call'}, {'name': 'get_product_price', 'args': {'query': 'P003'}, 'id': 'tooluse_bkuXZoupIVEKYUKGloOwLc', 'type': 'tool_call'}] usage_metadata={'input_tokens': 1052, 'output_tokens': 46, 'total_tokens': 1098, 'input_token_details': {'cache_creation': 0, 'cache_read': 0}}
+----
+2026-11-25 17:12:52.525697
+Edge: next_step: Proceed to tools
+content=[{'type': 'tool_use', 'name': 'get_product_price', 'input': {'query': 'P002'}, 'id': 'tooluse_NJ1Y9ndyOcepSqlkcAvvAh'}, {'type': 'tool_use', 'name': 'get_product_price', 'input': {'query': 'P003'}, 'id': 'tooluse_bkuXZoupIVEKYUKGloOwLc'}] additional_kwargs={} response_metadata={'ResponseMetadata': {'RequestId': '81ac0633-3955-49ce-a345-8be314b90063', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Wed, 25 Nov 2026 17:12:52 GMT', 'content-type': 'application/json', 'content-length': '416', 'connection': 'keep-alive', 'x-amzn-requestid': '81ac0633-3955-49ce-a345-8be314b90063'}, 'RetryAttempts': 0}, 'stopReason': 'tool_use', 'metrics': {'latencyMs': [762]}, 'model_name': 'us.amazon.nova-2-lite-v1:0'} id='run--01a213b2-2528-7752-a6f6-14da3b736b38-0' tool_calls=[{'name': 'get_product_price', 'args': {'query': 'P002'}, 'id': 'tooluse_NJ1Y9ndyOcepSqlkcAvvAh', 'type': 'tool_call'}, {'name': 'get_product_price', 'args': {'query': 'P003'}, 'id': 'tooluse_bkuXZoupIVEKYUKGloOwLc', 'type': 'tool_call'}] usage_metadata={'input_tokens': 1052, 'output_tokens': 46, 'total_tokens': 1098, 'input_token_details': {'cache_creation': 0, 'cache_read': 0}}
+----
+2026-11-25 17:12:52.563688
+Node: ask_model_to_reason (entry)
+content='Price of product P002 is 60\n' name='get_product_price' id='354af382-dd63-4d6f-b176-63b222ea985d' tool_call_id='tooluse_NJ1Y9ndyOcepSqlkcAvvAh'
+content='Price of product P003 is 70\n' name='get_product_price' id='6d0056b5-a79f-4bc0-b0f0-c8912df99862' tool_call_id='tooluse_bkuXZoupIVEKYUKGloOwLc'
+----
+2026-11-25 17:12:53.310653
+Node: ask_model_to_reason (exit)
+content=[{'type': 'tool_use', 'name': 'calculator', 'input': {'expression': '3*60 + 5*70'}, 'id': 'tooluse_UfNrbwz1khV2bY5QrDnIOO'}] additional_kwargs={} response_metadata={'ResponseMetadata': {'RequestId': '14c11bfa-df6b-435e-8e1c-57bbe682f2e1', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Wed, 25 Nov 2026 17:12:53 GMT', 'content-type': 'application/json', 'content-length': '310', 'connection': 'keep-alive', 'x-amzn-requestid': '14c11bfa-df6b-435e-8e1c-57bbe682f2e1'}, 'RetryAttempts': 0}, 'stopReason': 'tool_use', 'metrics': {'latencyMs': [733]}, 'model_name': 'us.amazon.nova-2-lite-v1:0'} id='run--01a213b2-2853-7a92-a4af-ab32de959a38-0' tool_calls=[{'name': 'calculator', 'args': {'expression': '3*60 + 5*70'}, 'id': 'tooluse_UfNrbwz1khV2bY5QrDnIOO', 'type': 'tool_call'}] usage_metadata={'input_tokens': 1152, 'output_tokens': 32, 'total_tokens': 1184, 'input_token_details': {'cache_creation': 0, 'cache_read': 0}}
+----
+2026-11-25 17:12:53.311131
+Edge: next_step: Proceed to tools
+content=[{'type': 'tool_use', 'name': 'calculator', 'input': {'expression': '3*60 + 5*70'}, 'id': 'tooluse_UfNrbwz1khV2bY5QrDnIOO'}] additional_kwargs={} response_metadata={'ResponseMetadata': {'RequestId': '14c11bfa-df6b-435e-8e1c-57bbe682f2e1', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Wed, 25 Nov 2026 17:12:53 GMT', 'content-type': 'application/json', 'content-length': '310', 'connection': 'keep-alive', 'x-amzn-requestid': '14c11bfa-df6b-435e-8e1c-57bbe682f2e1'}, 'RetryAttempts': 0}, 'stopReason': 'tool_use', 'metrics': {'latencyMs': [733]}, 'model_name': 'us.amazon.nova-2-lite-v1:0'} id='run--01a213b2-2853-7a92-a4af-ab32de959a38-0' tool_calls=[{'name': 'calculator', 'args': {'expression': '3*60 + 5*70'}, 'id': 'tooluse_UfNrbwz1khV2bY5QrDnIOO', 'type': 'tool_call'}] usage_metadata={'input_tokens': 1152, 'output_tokens': 32, 'total_tokens': 1184, 'input_token_details': {'cache_creation': 0, 'cache_read': 0}}
+----
+2026-11-25 17:12:53.315123
+Node: ask_model_to_reason (entry)
+content='Price of product P002 is 60\n' name='get_product_price' id='354af382-dd63-4d6f-b176-63b222ea985d' tool_call_id='tooluse_NJ1Y9ndyOcepSqlkcAvvAh'
+content='Price of product P003 is 70\n' name='get_product_price' id='6d0056b5-a79f-4bc0-b0f0-c8912df99862' tool_call_id='tooluse_bkuXZoupIVEKYUKGloOwLc'
+content='530' name='calculator' id='0c87cb6b-d1a5-4117-a93e-16fd6d4998ce' tool_call_id='tooluse_UfNrbwz1khV2bY5QrDnIOO'
+----
+2026-11-25 17:12:53.779778
+Node: ask_model_to_reason (exit)
+content='The total cost for buying 3 units of P002 and 5 units of P003 is $530.' additional_kwargs={} response_metadata={'ResponseMetadata': {'RequestId': 'aa7c2169-f1e4-48b5-ad51-93d2b00f5fbc', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Wed, 25 Nov 2026 17:12:53 GMT', 'content-type': 'application/json', 'content-length': '276', 'connection': 'keep-alive', 'x-amzn-requestid': 'aa7c2169-f1e4-48b5-ad51-93d2b00f5fbc'}, 'RetryAttempts': 0}, 'stopReason': 'end_turn', 'metrics': {'latencyMs': [452]}, 'model_name': 'us.amazon.nova-2-lite-v1:0'} id='run--01a213b2-2b43-7ef0-9508-c2c2424ed5a7-0' usage_metadata={'input_tokens': 1210, 'output_tokens': 23, 'total_tokens': 1233, 'input_token_details': {'cache_creation': 0, 'cache_read': 0}}
+----
+2026-11-25 17:12:53.780153
+Edge: next_step: Proceed to end
+content='The total cost for buying 3 units of P002 and 5 units of P003 is $530.' additional_kwargs={} response_metadata={'ResponseMetadata': {'RequestId': 'aa7c2169-f1e4-48b5-ad51-93d2b00f5fbc', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Wed, 25 Nov 2026 17:12:53 GMT', 'content-type': 'application/json', 'content-length': '276', 'connection': 'keep-alive', 'x-amzn-requestid': 'aa7c2169-f1e4-48b5-ad51-93d2b00f5fbc'}, 'RetryAttempts': 0}, 'stopReason': 'end_turn', 'metrics': {'latencyMs': [452]}, 'model_name': 'us.amazon.nova-2-lite-v1:0'} id='run--01a213b2-2b43-7ef0-9508-c2c2424ed5a7-0' usage_metadata={'input_tokens': 1210, 'output_tokens': 23, 'total_tokens': 1233, 'input_token_details': {'cache_creation': 0, 'cache_read': 0}}
+----
